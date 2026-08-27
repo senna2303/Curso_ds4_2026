@@ -4,9 +4,6 @@ def calculate_rectange(lenght,width):
     area = lenght * width
     return area
 
-
-
-
 def main():
     """Main function to parse commmand-line arguments 
     and calculate the area"""
