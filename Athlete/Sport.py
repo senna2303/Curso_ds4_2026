@@ -24,8 +24,7 @@ class Sport:
         return f"Sport(sport_name={self.sport_name},{self.num_players},{self.league})"
 
     def display(self):
-        # Asigna un ancho fijo a cada columna (ej. 12 caracteres para deporte, 4 para jugadores, 10 para liga)
-        print(f"{self.sport_name:<12} | {self.num_players:>4} | {self.league:<10}")
+        print(f"|{self.sport_name:^12} | {self.num_players:^4} | {self.league:^10}|")
 
 if __name__ == "__main__":
     s = Sport('Soccer',11,'Liga MX')
