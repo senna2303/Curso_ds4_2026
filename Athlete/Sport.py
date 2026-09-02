@@ -15,21 +15,20 @@ class Sport:
             self.league = league
         else:
             raise ValueError(
-                f"Sport name should be:{', '.join(self.max_score.keys())}"
+                f"Sport name '{sport_name}' should be:{', '.join(self.max_score.keys())}"
             )
     def __str__(self):
-        return f"{self.sport_name} with {self.num_players} in leage: {self.league}"
-
+        return f"{self.sport_name} with {self.num_players} in league: {self.league}"
     def __repr__(self) -> str:
-        return f"Sport(sport_name={self.sport_name},{self.num_players},{self.league})"
-
+        return f"Sport('{self.sport_name}',{self.num_players},'{self.league}')"
     def display(self):
-        print(f"|{self.sport_name:^12} | {self.num_players:^4} | {self.league:^10}|")
+        print(f"|{self.sport_name:<15}|{self.num_players:>3}|{self.league:^15}|")
 
-if __name__ == "__main__":
-    s = Sport('Soccer',11,'Liga MX')
-    b = Sport('Baseball',9,'MLB')
+if __name__ == '__main__':
+    s = Sport('Soccer',11,'LigaMX')
+    b = Sport('Baseball',9,'LMP')
     print(b)
     print(s)
     s.display()
-    b.display()    
+    b.display()
+    #r = Sport('Rugby',10,'RugbyAus')
